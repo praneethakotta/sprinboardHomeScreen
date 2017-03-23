@@ -1,0 +1,28 @@
+
+    <div class="main" ng-controller="listController"> 
+        <div class="searchDiv">
+            <input type="text" ng-model="userName" placeholder="github login">
+            <button type="button" ng-click="addUser()">Add</button>
+        </div>
+        <hr>
+        <span>Sort by:</span>
+        <ul>
+          <li><a >Name</a></li>
+          <li><a >Location</a></li>
+          <li><a >Followers</a></li>
+        </ul>
+        <ul class="userDetails">
+            <li class="card" ng-repeat="user in users">
+                <div class="img">
+                  <a target="_blank">
+                    <img src="images/uthapizza.png" alt="crackImg" width="300px" height="200px">
+                  </a>
+                  <div class="name">{{user.login}}</div>
+                  <div class="location">Location:</div>
+                  <div class="followers">Followers:</div>
+                  <a class="delete" ng-click="deleteUser()" href="#">&times;</a>
+                </div>             
+            </li>
+        </ul>
+    </div>
+    
